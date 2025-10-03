@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dax's Dev | My Place on the Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #1d4ed8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-slate-900 text-gray-800 dark:text-slate-300 transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200 dark:border-slate-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900 dark:text-white tracking-wider">
+                Dax's <span class="gradient-text">Dev</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#web-apps" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Web Apps</a>
+                <a href="#mobile-apps" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Mobile Apps</a>
+                <button id="theme-toggle" class="text-gray-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none">
+                    <svg id="theme-toggle-dark-icon" class="hidden h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 dark:text-slate-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#web-apps" class="block py-2 text-center hover:bg-gray-200 dark:hover:bg-slate-800 rounded">Web Apps</a>
+            <a href="#mobile-apps" class="block py-2 text-center hover:bg-gray-200 dark:hover:bg-slate-800 rounded">Mobile Apps</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Hero Section -->
+        <section class="text-center mb-20 md:mb-32">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4 leading-tight">
+                Web and Mobile Apps
+            </h1>
+            <p class="gradient-text text-xl md:text-2xl font-semibold mb-8">Crafted by Dax</p>
+            <p class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-slate-400">
+                Welcome to my place on the web. This website contains my personal projects I enjoy creating when I have the time. Explore my projects below.
+            </p>
+        </section>
+
+        <!-- Web Apps Section -->
+        <section id="web-apps" class="mb-20 md:mb-32">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">Web Apps</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-md dark:shadow-lg dark:shadow-slate-950/50">
+                    <img src="https://wpmedia.roomsketcher.com/content/uploads/2022/01/06145940/What-is-a-floor-plan-with-dimensions.png" alt="Floor Plan project screenshot" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=Image+Error';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Floor Plan</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-4">My wife and I could not find a truly free application to create custom floor plans, so we decided to build our own.</p>
+                        <a href="https://floorplan.daxs.dev" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">Try Floor Plan</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-md dark:shadow-lg dark:shadow-slate-950/50">
+                    <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Project+Two" alt="Project Two Screenshot" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=Image+Error';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Task Management App</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-4">A collaborative task manager that helps teams organize projects, assign tasks, and track progress in real-time.</p>
+                        <a href="#" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-md dark:shadow-lg dark:shadow-slate-950/50">
+                    <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=Project+Three" alt="Project Three Screenshot" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=Image+Error';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Data Visualization Dashboard</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-4">An interactive dashboard for visualizing complex datasets with dynamic charts and filterable reports.</p>
+                        <a href="#" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Apps Section -->
+        <section id="mobile-apps" class="mb-20 md:mb-32">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">Mobile Apps</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Mobile Project 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-md dark:shadow-lg dark:shadow-slate-950/50">
+                    <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=App+One" alt="App One Screenshot" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=Image+Error';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Fitness Tracker</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-4">A mobile app to log workouts, track fitness goals, and monitor progress with detailed statistics. Available on iOS and Android.</p>
+                        <div class="flex space-x-4">
+                           <a href="#" class="inline-block bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors duration-300">App Store</a>
+                           <a href="#" class="inline-block bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors duration-300">Google Play</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Project 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-md dark:shadow-lg dark:shadow-slate-950/50">
+                    <img src="https://placehold.co/600x400/e2e8f0/1e293b?text=App+Two" alt="App Two Screenshot" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=Image+Error';">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Recipe Discovery App</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-4">Find new recipes based on ingredients you have, with step-by-step instructions and a built-in shopping list feature.</p>
+                         <div class="flex space-x-4">
+                           <a href="#" class="inline-block bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors duration-300">App Store</a>
+                           <a href="#" class="inline-block bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors duration-300">Google Play</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500 dark:text-slate-500">
+            <p>&copy; 2024 Dax's Dev. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Theme toggle
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        const themeToggleButton = document.getElementById('theme-toggle');
+
+        // Function to apply theme
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                themeToggleLightIcon.classList.remove('hidden');
+                themeToggleDarkIcon.classList.add('hidden');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeToggleLightIcon.classList.add('hidden');
+                themeToggleDarkIcon.classList.remove('hidden');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Check for saved theme preference, otherwise default to light mode
+        const savedTheme = localStorage.getItem('theme');
+
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else {
+            applyTheme('light');
+        }
+
+        // Add event listener for the toggle button
+        themeToggleButton.addEventListener('click', () => {
+            const isDarkMode = document.documentElement.classList.contains('dark');
+            applyTheme(isDarkMode ? 'light' : 'dark');
+        });
+
+    </script>
+</body>
+</html>
